@@ -1,1 +1,130 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Impressum | CodeAkrobat</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .legal-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .legal-card {
+            background: var(--surface-black);
+            padding: 2.5rem;
+            border-left: 4px solid var(--orange); /* Nutze var(--beastie-red) für NeuraBSD-Blau/Lila */
+            border-radius: 0;
+            box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.5);
+        }
+        .legal-card h3 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1.2rem;
+        }
+        .legal-card p {
+            margin-bottom: 0;
+            line-height: 1.6;
+            color: var(--text-grey);
+        }
+        .log-list {
+            margin-top: 1rem;
+            list-style: none;
+            padding-left: 0;
+        }
+        .log-list li::before {
+            content: "> ";
+            color: var(--orange);
+            font-family: var(--mono-font);
+        }
+    </style>
+</head>
+<body>
 
+    <header class="header">
+        <div class="logo"><a href="index.html" style="text-decoration:none; color:inherit;">CODE<span>AKROBAT</span></a></div>
+        <nav class="nav">
+            <a href="index.html">Zurück zur Manege</a>
+        </nav>
+    </header>
+
+    <main class="section container" style="padding-top: 100px; padding-bottom: 100px;">
+        <h1 class="mb-6" style="border-bottom: 2px solid var(--surface-black); padding-bottom: 20px;">
+            Impres<span>sum</span>
+        </h1>
+        
+        <div class="legal-content">
+
+            <article class="legal-card" style="border-left-color: #555; margin-bottom: 2rem;">
+                <h3 style="color: var(--text-muted);">Status: Non-Commercial / Portfolio Mode</h3>
+                <p>
+                <strong>Hinweis:</strong> Dies ist derzeit eine <strong>rein private, nicht-kommerzielle Webseite</strong>. 
+                Sie dient ausschließlich der Präsentation meines persönlichen Portfolios, der Dokumentation meiner Open-Source-Projekte (NeuraBSD) 
+                sowie als Leistungsnachweis für meine angestrebte berufliche Qualifikation als Software Engineer.
+                </p>
+                
+                <p style="margin-top: 1rem; font-style: italic; font-size: 0.9rem;">
+                Sämtliche Inhalte befinden sich in der "Beta-Phase". Es werden über diese Seite momentan keine kostenpflichtigen 
+                Dienstleistungen oder Produkte angeboten. Die Vorbereitung für eine spätere gewerbliche Nutzung ist im Gange, 
+                weshalb dieses Impressum bereits vorsorglich nach den Standards des TMG geführt wird.
+                </p>
+            </article>
+            
+            <article class="legal-card">
+                <h3 style="color: var(--orange);">01. Angaben gemäß § 5 TMG</h3>
+                <p>Hinter dieser Domain steht:</p>
+                <p style="margin-top: 1.5rem;">
+                    <strong>Daniel Hilbert</strong><br>
+                    CodeAkrobat.de<br>
+                    Am Dorfbach 4<br>
+                    82441 Ohlstadt<br>
+                </p>
+            </article>
+
+            <article class="legal-card">
+                <h3 style="color: var(--orange);">02. Kontakt</h3>
+                <p>Direktkontakt zur Entwickler-Unit:</p>
+                <ul class="log-list">
+                    <li>E-Mail: info [at] codeakrobat.de</li>
+                    <li>GitHub: DH-NBSD</li>
+                    <li>Web: codeakrobat.de</li>
+                </ul>
+            </article>
+
+            <article class="legal-card">
+                <h3 style="color: var(--orange);">03. Haftung für Inhalte</h3>
+                <p>Als Diensteanbieter bin ich für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Die Inhalte wurden mit der Sorgfalt eines Code-Audits erstellt. Irrtümer in der Matrix sind menschlich – Bug-Reports sind via E-Mail willkommen.</p>
+            </article>
+
+            <article class="legal-card">
+                <h3 style="color: var(--orange);">04. Externe Verweise</h3>
+                <p>Diese Seite enthält Links zu externen Webseiten Dritter. Da mir dort die Root-Rechte fehlen, habe ich keinen Einfluss auf deren Inhalte. Bei Bekanntwerden von Rechtsverletzungen werden derartige Links umgehend aus dem Repo entfernt.</p>
+            </article>
+
+            <article class="legal-card">
+                <h3 style="color: var(--orange);">05. Urheberrecht</h3>
+                <p>Die erstellten Inhalte, Codes und Designs (AxonSurface, DaemonPath etc.) unterliegen dem deutschen Urheberrecht. Für Open-Source-Komponenten gelten die jeweiligen Lizenzen im <strong>MASTER-REPO</strong> auf GitHub.</p>
+            </article>
+
+            <footer style="text-align: center; opacity: 0.5; font-style: italic; margin-top: 2rem;">
+                <p>"Verantwortung ist kein Bug, sondern ein Feature."</p>
+                <div class="footer-bottom">
+                <div class="flex-footer-bottom">
+                    <p>&copy; 2026 CodeAkrobat. Alle Rechte vorbehalten.</p>
+                </div>
+            </div>
+            </footer>
+
+        </div>
+    </main>
+    <a href="index.html" class="back-to-manege-bottom" title="Zurück zur Manege">
+    <span class="text">Zurück zur Manege</span>
+    <span class="arrow">→</span>
+    </a>
+</body>
+</html>
