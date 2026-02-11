@@ -1,0 +1,688 @@
+/* ========================================
+    CODEAKROBAT - GLOBAL STYLES & VARIABLES
+    ========================================
+*/
+
+:root {
+    /* Farbpalette */
+    --navy-dark: #0a0d10;
+    --navy-panel: #161b22;
+    --orange: #ff8c42;
+    --orange-glow: rgba(255, 140, 66, 0.4);
+    --text-main: #e6edf3;
+    --text-muted: #8b949e;
+    --border: rgba(255, 255, 255, 0.1);
+    
+    /* Layout */
+    --container-width: 1200px;
+    --section-padding: 100px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reset & Basis */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--navy-dark);
+    color: var(--text-main);
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+h1, h2, h3 {
+    color: #ffffff;
+    line-height: 1.2;
+}
+
+span.highlight {
+    color: var(--orange);
+    text-shadow: 0 0 15px var(--orange-glow);
+}
+
+.section {
+    padding: var(--section-padding) 0;
+}
+
+.mb-6 { margin-bottom: 2rem; }
+
+/* ========================================
+    HEADER & NAVIGATION - REBUILT
+    ========================================
+*/
+
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(10, 13, 16, 0.95);
+    backdrop-filter: blur(12px);
+    z-index: 9999;
+    border-bottom: 1px solid var(--border);
+    height: 80px; /* Definierte Höhe */
+    display: flex;
+    align-items: center;
+}
+
+.header .container {
+    width: 100%;
+    display: flex !important; /* Force Flex */
+    flex-direction: row !important; /* Force Horizontal */
+    justify-content: space-between; /* Links Logo, Rechts Nav */
+    align-items: center;
+}
+
+.logo {
+    flex-shrink: 0; /* Verhindert, dass das Logo gequetscht wird */
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.nav {
+    display: flex !important;
+    flex-direction: row !important;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav a {
+    color: var(--text-main);
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: var(--transition);
+    white-space: nowrap; /* Verhindert Zeilenumbruch im Link */
+}
+
+.nav a:hover {
+    color: var(--orange);
+}
+
+/* Spezifische Mobile Anpassung */
+@media (max-width: 768px) {
+    .header {
+        height: auto;
+        padding: 15px 0;
+    }
+    
+    .header .container {
+        flex-direction: column !important; /* Untereinander auf kleinen Handys */
+        gap: 15px;
+    }
+
+    .nav a {
+        margin: 0 10px;
+        font-size: 0.85rem;
+    }
+}
+
+
+
+
+
+/* ========================================
+    HERO SECTION - CENTERED REBUILD
+    ========================================
+*/
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Horizontale Zentrierung */
+    text-align: center;      /* Text mittig ausrichten */
+    padding-top: 80px;
+}
+
+.hero-centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* Zentriert alle Elemente (h1, p, btn) in der Spalte */
+}
+
+.hero h1 {
+    font-size: clamp(3rem, 8vw, 5rem);
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.hero h1 span {
+    color: var(--orange);
+    text-shadow: 0 0 20px var(--orange-glow);
+}
+
+.hero-subtitle {
+    font-size: 1.4rem;
+    max-width: 800px;
+    margin: 0 auto 2.5rem auto; /* "auto" links/rechts sorgt für Zentrierung */
+    color: var(--text-muted);
+}
+
+.btn-primary {
+    display: inline-block;
+    background: var(--orange);
+    color: #ffffff !important;
+    padding: 16px 40px;
+    
+    /* RECHTECKIG MIT RUNDEN ECKEN */
+    border-radius: 6px; /* Kleiner Wert = dezente Rundung */
+    
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase; /* Wirkt bei eckigen Buttons oft seriöser */
+    letter-spacing: 1.5px;
+    box-shadow: 0 4px 15px var(--orange-glow);
+    transition: var(--transition);
+    border: 2px solid var(--orange); /* Fester Rahmen verhindert Springen beim Hover */
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px var(--orange-glow);
+    background: transparent; /* Button wird beim Hover transparent (Ghost-Effekt) */
+    color: var(--orange) !important;
+}
+
+/* ========================================
+    DISZIPLINEN / SERVICES - RE-DESIGN
+    ========================================
+*/
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.service {
+    background: var(--navy-panel);
+    padding: 45px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.service:hover {
+    border-color: var(--orange);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Die Berufsbezeichnungen in Orange */
+.service-title {
+    color: var(--orange) !important;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.service p {
+    color: var(--text-muted);
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+/* Optionaler kleiner Akzent-Strich unter der Überschrift */
+.service::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 0;
+    background: var(--orange);
+    transition: var(--transition);
+}
+
+.service:hover::after {
+    height: 100%;
+}
+
+/* ========================================
+    SKILLS (2 SPALTEN)
+    ========================================
+*/
+
+.skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.skill-bar-container { margin-bottom: 1.5rem; }
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.skill-bar {
+    height: 8px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 4px;
+    width: 100%;
+}
+
+.skill-progress {
+    height: 100%;
+    background: var(--orange);
+    width: var(--w); /* Nutzt die CSS Variable aus dem HTML */
+    border-radius: 4px;
+    box-shadow: 0 0 10px var(--orange-glow);
+}
+
+.skill-progress {
+    height: 100%;
+    background: linear-gradient(90deg, var(--orange), #ffae70);
+    border-radius: 4px;
+    box-shadow: 0 0 10px var(--orange-glow);
+
+    /* WICHTIG FÜR DAS JAVASCRIPT: */
+    width: 0; /* Startet bei 0, JS setzt dann den Wert aus --w */
+    transition: width 1.5s cubic-bezier(0.1, 0.5, 0.2, 1); /* Sorgt für das flüssige "Wachsen" */
+}
+
+/* ========================================
+    PORTFOLIO SECTION
+    ========================================
+*/
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.portfolio-item {
+    background: var(--navy-panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: var(--transition);
+    position: relative;
+    padding: 30px;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    border-color: var(--orange);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.category {
+    color: var(--orange);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.portfolio-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.portfolio-item p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.tech-stack {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tech-stack span {
+    background: rgba(255, 140, 66, 0.1);
+    color: var(--orange);
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    border: 1px solid rgba(255, 140, 66, 0.2);
+}
+
+.portfolio-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.project-link {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.project-link:hover {
+    color: var(--orange);
+    border-bottom-color: var(--orange);
+}
+
+.project-link.primary {
+    color: var(--orange);
+    font-weight: 600;
+}
+
+/* ========================================
+    ABOUT & LEGAL SECTIONS
+    ========================================
+*/
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-image .image-placeholder {
+    background: var(--navy-panel);
+    height: 400px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ========================================
+    FOOTER
+    ========================================
+*/
+
+.main-footer {
+    background: #050709;
+    padding-top: 80px;
+    border-top: 1px solid var(--border);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 4rem;
+    padding-bottom: 60px;
+}
+
+.footer-bottom {
+    padding: 25px 0;
+    border-top: 1px solid var(--border);
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.flex-footer-bottom {
+    display: flex;
+    justify-content: center; /* Ändert die Ausrichtung von 'space-between' auf 'center' */
+    text-align: center;      /* Stellt sicher, dass der Text innerhalb des p-Tags zentriert ist */
+}
+
+
+/* ========================================
+    FOOTER LINK STYLING
+    ========================================
+*/
+
+.footer-col ul {
+    list-style: none; /* Entfernt die Punkte */
+}
+
+.footer-col ul li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-col a {
+    text-decoration: none;      /* Entfernt die Unterstreichung */
+    color: var(--text-muted);   /* Nutzt das dezente Grau des Designs */
+    font-size: 0.95rem;
+    transition: var(--transition);
+    display: inline-block;
+}
+
+/* Hover-Effekt: Nur beim Drüberfahren wird es lebendig */
+.footer-col a:hover {
+    color: var(--orange);       /* Wechselt zu deinem Akzent-Orange */
+    transform: translateX(5px); /* Kleiner akrobatischer Slide-Effekt nach rechts */
+}
+
+/* Rechtliche Links in der untersten Zeile (Copyright-Bereich) */
+.footer-bottom p, 
+.footer-bottom a {
+    color: rgba(139, 148, 158, 0.6); /* Noch etwas dezenter */
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.footer-bottom a:hover {
+    color: var(--orange);
+}
+
+/* ========================================
+    LOGO STYLING - FIX
+    ========================================
+*/
+
+.logo {
+    font-size: 1.8rem; /* Etwas markanter */
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #ffffff; /* "CODE" wird weiß */
+    text-decoration: none;
+    user-select: none;
+}
+
+.logo span {
+    color: var(--orange) !important; /* "AKROBAT" wird orange */
+    text-shadow: 0 0 10px var(--orange-glow); /* Der typische Akrobat-Glow */
+}
+
+
+/* ========================================
+    RESPONSIVE DESIGN (MEDIA QUERIES)
+    ========================================
+*/
+
+/* Tablet Layout */
+@media (max-width: 1024px) {
+    :root { --section-padding: 70px; }
+    .skills-container { gap: 2rem; }
+}
+
+/* Smartphone & Small Tablets */
+@media (max-width: 768px) {
+    .container { padding: 0 25px; }
+    
+    .header .container { flex-direction: column; gap: 15px; }
+    .nav a { margin: 0 10px; font-size: 0.9rem; }
+
+    .hero { text-align: center; height: auto; padding: 150px 0 100px; }
+    .hero-subtitle { margin: 1.5rem auto 3rem; }
+
+    .about-grid, 
+    .skills-container, 
+    .footer-grid {
+        grid-template-columns: 1fr; /* Alles einspaltig */
+        gap: 3rem;
+    }
+
+    .about-image { order: -1; } /* Bild oben bei Mobile */
+    
+    .footer-grid { text-align: center; }
+    .flex-footer-bottom { flex-direction: column; align-items: center; gap: 10px; }
+}
+
+/* ========================================
+    KONTAKTFORMULAR (FORMMAILER)
+    ========================================
+*/
+
+.contact-section {
+    background: var(--navy-panel);
+    padding: 50px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    color: var(--orange);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    background: var(--navy-dark);
+    border: 1px solid var(--border);
+    padding: 15px;
+    border-radius: 8px;
+    color: var(--text-main);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--orange);
+    box-shadow: 0 0 10px var(--orange-glow);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.contact-form .btn-submit {
+    background: var(--orange);
+    color: #fff;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact-form .btn-submit:hover {
+    background: #ffae70;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px var(--orange-glow);
+}
+
+/* Mobile Anpassung für das Formular */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 30px 20px;
+    }
+}
+
+
+/* ========================================
+    BACK-TO-MANEGE BUTTON (GHOST-FIRST STYLE)
+   ======================================== */
+.back-to-manege-bottom {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 24px;
+    
+    /* NORMALZUSTAND: Dezent & Unauffällig */
+    background: transparent;
+    color: var(--orange) !important;
+    border: 2px solid var(--orange);
+    border-radius: 6px; /* Dein gewählter 6px Radius */
+    
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.back-to-manege-bottom .arrow {
+    transition: var(--transition);
+    font-size: 1.1rem;
+    color: var(--orange);
+}
+
+/* HOVER-EFFEKT: Wird nun vollflächig orange */
+.back-to-manege-bottom:hover {
+    background: var(--orange);
+    color: #ffffff !important;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px var(--orange-glow);
+}
+
+.back-to-manege-bottom:hover .arrow {
+    color: #ffffff;
+    transform: translateX(5px);
+}
+
+/* Mobile Anpassung */
+@media (max-width: 768px) {
+    .back-to-manege-bottom {
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 15px;
+    }
+    .back-to-manege-bottom .text {
+        display: none;
+    }
+}
