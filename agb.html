@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>AGB | CodeAkrobat</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .legal-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .legal-card {
+            background: var(--surface-black);
+            padding: 2.5rem;
+            border-left: 4px solid var(--orange);
+            border-radius: 0;
+            box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.5);
+        }
+        .legal-card h3 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1.2rem;
+        }
+        .legal-card h4 {
+            color: var(--text-grey);
+            margin-top: 1.5rem;
+            border-bottom: 1px solid #333;
+            display: inline-block;
+        }
+        .legal-card p, .legal-card li {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            color: var(--text-grey);
+        }
+        .log-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .log-list li::before {
+            content: ">> ";
+            color: var(--orange);
+            font-family: var(--mono-font);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo"><a href="index.html" style="text-decoration:none; color:inherit;">CODE<span>AKROBAT</span></a></div>
+        <nav class="nav">
+            <a href="index.html">Zurück zur Manege</a>
+        </nav>
+    </header>
+
+    <main class="section container" style="padding-top: 100px; padding-bottom: 100px;">
+        <h1 class="mb-6" style="border-bottom: 2px solid var(--surface-black); padding-bottom: 20px;">
+            Allgemeine<span> Geschäftsbedingungen</span>
+        </h1>
+        
+        <div class="legal-content">
+            
+            <article class="legal-card">
+                <h3 style="color: var(--orange);">01. Geltungsbereich & Vertragsgegenstand</h3>
+                <p>Diese AGB gelten für alle Leistungen von <strong>CodeAkrobat (Daniel Hilbert)</strong>. Mein Fokus liegt auf zwei Kernbereichen:</p>
+                <ul class="log-list">
+                    <li><strong>Webdesign:</strong> Konzeption, UI/UX (AxonSurface-Standard) und technische Umsetzung von Webauftritten.</li>
+                    <li><strong>Softwareentwicklung:</strong> Systemprogrammierung, Architekturberatung (MASTER-REPO-Struktur) und individuelle Softwarelösungen.</li>
+                </ul>
+            </article>
+
+            <article class="legal-card">
+                <h3 style="color: var(--orange);">02. Besondere Bedingungen für Webdesign</h3>
+                <p>Im Bereich Webdesign schuldet CodeAkrobat die Erstellung eines funktionalen Designs basierend auf dem Briefing.</p>
+                <ul class="log-list">
+                    <li><strong>Korrekturschleifen:</strong> Sofern nicht anders vereinbart, sind zwei Revisionen im Festpreis enthalten.</li>
+                    <li><strong>Browserkompatibilität:</strong> Optimierung erfolgt für moderne Browser. Eine Rückwärtskompatibilität für veraltete Systeme wird nicht garantiert.</li>
+                    <li><strong>Mitwirkungspflicht:</strong> Der Kunde stellt alle Inhalte (Texte, Bilder) rechtzeitig zur Verfügung.</li>
+                </ul>
+            </article>
+
+            <article class="legal-card">
+                <h3 style="color: var(--orange);">03. Besondere Bedingungen für Softwareentwicklung</h3>
+                <p>Softwareentwicklung ist ein iterativer Prozess. Hier gelten die Maßstäbe moderner Systementwicklung:</p>
+                <ul class="log-list">
+                    <li><strong>Lastenheft:</strong> Grundlage ist ein vom Kunden freigegebenes Pflichtenheft oder ein agiler Entwicklungsplan.</li>
+                    <li><strong>Open Source:</strong> Werden Komponenten unter Lizenzen wie BSD oder MIT verwendet, gelten deren Bedingungen vorrangig für die jeweilige Komponente.</li>
+                    <li><strong>Abnahme:</strong> Die Software gilt als abgenommen, sobald sie 14 Tage im Testbetrieb ohne kritische Fehler (Showstopper) läuft.</li>
+                </ul>
+            </article>
+
+            <article class="legal-card">
+                <h3 style="color: var(--orange);">04. Nutzungsrechte & Eigentum</h3>
+                <p>Bis zur vollständigen Bezahlung bleiben alle Rechte bei CodeAkrobat.</p>
+                <p>Nach Zahlung erhält der Kunde das einfache Nutzungsrecht für den vereinbarten Zweck. Quellcodes bei Individualsoftware werden nur ausgehändigt, wenn dies explizit schriftlich vereinbart wurde (Standard bei NeuraBSD-verwandten Projekten ist oft Open Source).</p>
+            </article>
+
+            <article class="legal-card">
+                <h3 style="color: var(--orange);">05. Vergütung & Zahlungsbedingungen</h3>
+                <p>Zahlungen sind innerhalb von 14 Tagen nach Rechnungsstellung ohne Abzug fällig. Bei größeren Projekten erfolgt die Abrechnung in Milestones:</p>
+                <ul class="log-list">
+                    <li>30% bei Beauftragung (Commitment-Fee)</li>
+                    <li>40% bei Erreichung des ersten Prototyps / Betaphase</li>
+                    <li>30% nach finaler Abnahme</li>
+                </ul>
+            </article>
+
+            <article class="legal-card">
+                <h3 style="color: var(--orange);">06. Haftung & Gewährleistung</h3>
+                <p>CodeAkrobat haftet nur für Vorsatz und grobe Fahrlässigkeit. Die Haftung für Datenverlust wird ausgeschlossen, sofern der Kunde keine ordnungsgemäße Datensicherung (Backup-Routine) durchgeführt hat.</p>
+                <p>Für Softwarefehler, die durch Updates von Drittanbietern (OS, Browser) nach Übergabe entstehen, übernehme ich keine kostenfreie Haftung.</p>
+            </article>
+
+            <article class="legal-card">
+                <h3 style="color: var(--orange);">07. Schlussbestimmungen</h3>
+                <p>Es gilt das Recht der Bundesrepublik Deutschland. Gerichtsstand ist, soweit rechtlich zulässig, der Sitz von CodeAkrobat.</p>
+            </article>
+
+            <footer style="text-align: center; opacity: 0.5; font-style: italic; margin-top: 2rem;">
+                <p>"Klarer Code, klare Regeln. Ende des Protokolls."</p>
+                div class="footer-bottom">
+                <div class="flex-footer-bottom">
+                    <p>&copy; 2026 CodeAkrobat. Alle Rechte vorbehalten.</p>
+                </div>
+            </div>
+            </footer>
+
+        </div>
+    </main>
+    <a href="index.html" class="back-to-manege-bottom" title="Zurück zur Manege">
+    <span class="text">Zurück zur Manege</span>
+    <span class="arrow">→</span>
+    </a>
+</body>
+</html>
