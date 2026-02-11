@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Datenschutz | CodeAkrobat</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .legal-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .legal-card {
+            background: var(--surface-black);
+            padding: 2.5rem;
+            border-left: 4px solid var(--orange);
+            border-radius: 0;
+            /* Hier ist der markante Schatten für den konsistenten Look */
+            box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.5);
+        }
+        .legal-card h3 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1.2rem;
+        }
+        .legal-card p {
+            margin-bottom: 0;
+            line-height: 1.6;
+            color: var(--text-grey);
+        }
+        .log-list {
+            margin-top: 1rem;
+            list-style: none;
+            padding-left: 0;
+        }
+        .log-list li::before {
+            content: "> ";
+            color: var(--orange);
+            font-family: var(--mono-font);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo"><a href="index.html" style="text-decoration:none; color:inherit;">CODE<span>AKROBAT</span></a></div>
+        <nav class="nav">
+            <a href="index.html">Zurück zur Manege</a>
+        </nav>
+    </header>
+
+    <main class="section container" style="padding-top: 100px; padding-bottom: 100px;">
+        <h1 class="mb-6" style="border-bottom: 2px solid var(--surface-black); padding-bottom: 20px;">
+            Datenschutz<span>erklärung</span>
+        </h1>
+        
+        <div class="legal-content">
+            
+            <article class="legal-card">
+                <h3 style="color: var(--orange);">01. Philosophie</h3>
+                <p>Kurz und schmerzlos: Auf <strong>codeakrobat.de</strong> gibt es kein Tracking, keine Analyse-Cookies und keine neugierigen Skripte. Ich baue Systeme wie NeuraBSD – ich verkaufe keine Nutzerdaten. Was nicht gebraucht wird, wird nicht installiert.</p>
+            </article>
+
+            <article class="legal-card">
+                <h3 style="color: var(--orange);">02. Verantwortliche Stelle</h3>
+                <p>
+                    <strong>Daniel Hilbert</strong><br>
+                    CodeAkrobat.de<br>
+                    Am Dorfbach 4<br>
+                    82441 Ohlstadt<br>
+                    <span style="font-family: var(--mono-font);">E-Mail: info [at] codeakrobat.de</span>
+                </p>
+            </article>
+
+            <article class="legal-card">
+                <h3 style="color: var(--orange);">03. Server-Log-Dateien</h3>
+                <p>Technisch bedingt speichert der Webserver bei jedem Aufruf folgende Daten in einer Log-Datei:</p>
+                <ul class="log-list">
+                    <li>IP-Adresse (Zustellungs-Endpunkt)</li>
+                    <li>Zeitstempel der Anfrage</li>
+                    <li>User-Agent (Browser & OS)</li>
+                    <li>Referrer (Herkunftsquelle)</li>
+                </ul>
+                <br />
+                <p>Zweck: Sicherheit und Stabilität (Art. 6 Abs. 1 lit. f DSGVO).</p>
+            </article>
+
+            <article class="legal-card">
+                <h3 style="color: var(--orange);">04. Hosting</h3>
+                <p>Die Inhalte liegen auf den Servern von <strong>[Hoster Name]</strong>. Ein Vertrag zur Auftragsverarbeitung (AVV) stellt sicher, dass alles nach meinen Regeln abläuft.</p>
+            </article>
+
+            <article class="legal-card">
+                <h3 style="color: var(--orange);">05. Deine Rechte</h3>
+                <p>Du hast das Recht auf Auskunft, Berichtigung oder Löschung. Da ich keine Profile erstelle, ist die Datenmenge minimal. Ein kurzer Kontakt genügt.</p>
+            </article>
+
+            <footer style="text-align: center; opacity: 0.5; font-style: italic; margin-top: 2rem;">
+                <p>"Lass alles weg, was keine Funktion hat – Code & Privacy."</p>
+                div class="footer-bottom">
+                <div class="flex-footer-bottom">
+                    <p>&copy; 2026 CodeAkrobat. Alle Rechte vorbehalten.</p>
+                </div>
+            </div>
+            </footer>
+
+        </div>
+    </main>
+    <a href="index.html" class="back-to-manege-bottom" title="Zurück zur Manege">
+    <span class="text">Zurück zur Manege</span>
+    <span class="arrow">→</span>
+    </a>
+</body>
+</html>
